@@ -1,0 +1,109 @@
+[
+    {
+        "title": "Basic Html Styling",
+        "description": "Task1",
+        "htmlFiles": [
+            "tasks/task1/welcome.html",
+            "tasks/task1/dashboard.html"
+        ],
+        "cssFile": "tasks/task1/styles.css"
+    },
+    {
+        "title": "CSS Hover",
+        "description": "Task2",
+        "htmlFile": "tasks/task2/task2.html"
+       
+    },
+    {
+        "title": "welcome to js",
+        "description": "Task3",
+        "htmlFile": "tasks/task3/task3.html"
+        
+    },
+    {
+        "title": "Calculator with js",
+        "description": "Task4",
+        "htmlFile": "tasks/task4/task4.html"
+        
+    },
+    {
+        "title": "Git hub integration",
+        "description": "Task5",
+        "htmlFile": "tasks/task5/task5.html"
+        
+    },
+    {
+        "title": "console output",
+        "description": "Task6",
+        "htmlFile": "tasks/task6/task6.html"
+        
+    },
+    {
+        "title": "string operation",
+        "description": "Task7",
+        "htmlFile": "tasks/task7/task7.html"
+        
+    },
+    {
+        "title": "conditions",
+        "description": "Task8",
+        "htmlFile": "tasks/task8/task8.html",
+        "jsFile": "task8/task8.js"
+        
+    },
+    {
+        "title": "call stack with array",
+        "description": "Task9",
+        "htmlFile": "tasks/task9/task9.html"
+        
+    },
+   
+    {
+        "title": "star with loops",
+        "description": "Task10",
+        "htmlFile": "tasks/task10/task10.html"
+        
+    },
+    {
+        "title": "class work task12",
+        "description": "Task11",
+        "htmlFile": "tasks/task11/task11.html"
+        
+    },
+    {
+        "title": "objects",
+        "description": "Task12",
+        "htmlFile": "tasks/task12/task12.html"
+        
+    },
+    {
+        "title": "objects2",
+        "description": "Task13",
+        "htmlFile": "tasks/task13/task13.html"
+        
+    },
+    {
+        "title": "functions",
+        "description": "Task14",
+        "htmlFile": "tasks/task14/task14.html"
+        
+    },
+    {
+        "title": "bootstrap_forms",
+        "description": "Task15",
+        "htmlFile": "tasks/task15/task15.html"
+        
+    },
+    {
+        "title": "bootstrap_checkout",
+        "description": "Task16",
+        "htmlFile": "tasks/task16/task16.html"
+        
+    },
+    {
+        "title": "json",
+        "description": "Task17",
+        "htmlFile": "tasks/task17/task17.html"
+        
+    }
+]

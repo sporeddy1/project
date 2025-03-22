@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+</head>
+<body>
+
+    <input type="text" id="name" placeholder="Name">
+    <input type="number" id="age" placeholder="Age">
+    <input type="date" id="dob">
+    
+    <button onclick="insert()">Insert Info</button>
+    <button onclick="display()">Show Info</button>
+
+    <h4>Results: </h4>
+
+    <p id="demo_div"></p>
+
+    <script>
+        let students = [];
+
+        function insert() {
+            let student = {
+                name: document.getElementById("name").value,
+                age: document.getElementById("age").value,
+                dob: document.getElementById("dob").value,
+                
+                main: function() {
+                    return "Hello, my name is " + this.name + ". I am " + this.age +
+                        " years old, born on " + this.dob 
+                }
+            };
+            students.push(student);
+            alert("Student added successfully");
+        }
+
+        function display() {
+            let output = "";
+            for (let i = 0; i < students.length; i++) {
+                output += students[i].main() + "<br>";
+            }
+            document.getElementById("demo_div").innerHTML = output;
+        }
+    </script>
+
+</body>
+</html>
