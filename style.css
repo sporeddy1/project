@@ -1,4 +1,4 @@
-/* Resetting some default styles */
+/* Resetting default styles */
 body, h2, p {
     margin: 0;
     padding: 0;
@@ -6,28 +6,36 @@ body, h2, p {
 
 /* Overall body setup */
 body {
-    font-family: Arial, sans-serif;
-    display: flex; /* Use flexbox for layout */
+    font-family: 'Roboto', Arial, sans-serif; /* Clean and readable font */
+    display: flex; /* Flexbox layout for easy positioning */
     min-height: 100vh; /* Full height of the screen */
     margin: 0;
+    background: linear-gradient(135deg, #ffffff, #f7f8f9); /* Light gradient background */
+    color: #333; /* Dark text for readability */
+    box-sizing: border-box; /* Ensure padding and margins don't cause overflow */
 }
 
 /* Sidebar styling */
 #sidebar {
-    width: 250px; /* Fixed width for the sidebar */
-    background-color: #333;
+    width: 250px; /* Sidebar with fixed width */
+    background-color: #2f3b52; /* Dark blue for a professional look */
     color: white;
     padding: 20px;
-    position: fixed; /* Sidebar stays fixed on the left */
+    position: fixed; /* Keeps the sidebar fixed */
     top: 0;
     left: 0;
-    height: 100%; /* Full height of the screen */
-    overflow-y: auto;
+    height: 100vh; /* Full height of the screen */
+    overflow-y: auto; /* Make the sidebar scrollable */
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.1); /* Adding subtle depth */
+    transition: all 0.3s ease; /* Smooth transition for responsiveness */
 }
 
 #sidebar h2 {
     text-align: center;
-    margin-bottom: 20px;
+    font-size: 1.8rem; /* Slightly larger font size for the title */
+    font-weight: 600; /* Slightly bolder font for title */
+    color: #f39c12; /* Gold color for title */
+    margin-bottom: 40px;
 }
 
 #sidebar ul {
@@ -42,45 +50,103 @@ body {
 #sidebar ul li a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: block; /* Make links fill the full width for easy clicking */
+    transition: color 0.3s ease, padding-left 0.3s ease; /* Smooth hover effect */
 }
 
 #sidebar ul li a:hover {
-    text-decoration: underline;
+    color: #f39c12; /* Gold hover effect */
+    padding-left: 10px; /* Subtle indentation on hover for a modern touch */
 }
 
 /* Main content area */
 #main-content {
-    margin-left: 280px; /* Add space between sidebar and main content */
-    padding: 20px;
+    margin-left: 270px; /* Create space between sidebar and content */
+    padding: 40px;
     flex-grow: 1;
-    height: 100%; /* Full height of the screen */
-    overflow-y: auto; /* Allow scrolling if content overflows */
+    min-height: 100vh; /* Full height for content */
+    height: auto; /* Allow content to grow */
+    overflow-y: auto; /* Ensure the content is scrollable if it exceeds screen height */
+    background-color: rgba(255, 255, 255, 0.98); /* Slightly transparent white background */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Adding depth to the content */
+    border-radius: 15px; /* Rounded corners for a softer look */
+    transition: all 0.3s ease; /* Smooth transition when resizing */
 }
 
 /* Title for main content */
 #main-content h2 {
-    margin-top: 0; /* Align the title to the top */
+    margin-top: 0;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #2e3d49; /* Dark gray for the heading */
+    margin-bottom: 20px;
 }
 
 /* Project display area */
 #project-display {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Depth for the project box */
+    transition: transform 0.3s ease; /* Smooth zoom effect */
+}
+
+#project-display h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+#project-display p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Hover effect for the project display area */
+#project-display:hover {
+    transform: scale(1.03); /* Slight zoom effect for interaction */
 }
 
 /* Responsive Design */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     #sidebar {
-        width: 100%; /* Sidebar takes full width */
-        height: auto;
-        position: relative;
+        width: 200px; /* Reduced width for medium screens */
     }
 
     #main-content {
-        margin-left: 0; /* Remove the sidebar margin on smaller screens */
+        margin-left: 220px; /* Adjust for smaller sidebar width */
+        padding: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #sidebar {
+        width: 100%; /* Sidebar takes full width on small screens */
+        height: auto;
+        position: relative; /* Sidebar no longer fixed */
+        padding: 15px;
+    }
+
+    #main-content {
+        margin-left: 0; /* Remove margin for full-width content */
+        padding: 20px;
+        height: auto;
+    }
+
+    #sidebar ul li {
+        margin: 15px 0; /* Reduced margin for smaller screens */
+    }
+
+    #sidebar h2 {
+        font-size: 1.5rem; /* Adjust title size for smaller screens */
+    }
+
+    #project-display {
+        padding: 15px; /* Less padding on small screens */
     }
 }
